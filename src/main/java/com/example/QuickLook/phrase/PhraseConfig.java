@@ -15,6 +15,31 @@ public class PhraseConfig {
     @Bean
     CommandLineRunner commandLineRunnerPhrase(PhraseRepository phraseRepository) {
         return args -> {
+//            Phrase p1 = new Phrase(
+//                    "phrase1set2",
+//                    "summary1set2",
+//                    new Date(),
+//                    null,
+//                    null
+//            );
+//            Phrase p2 = new Phrase(
+//                    "phrase2set2",
+//                    "summary2set2",
+//                    new Date(),
+//                    null,
+//                    null
+//            );
+//            Phrase p3 = new Phrase(
+//                "phrase3set2",
+//                "summary3set2",
+//                new Date(),
+//                null,
+//                null
+//            );
+//
+//            phraseRepository.saveAll(List.of(p1, p2, p3));
+
+
 
         };
     }

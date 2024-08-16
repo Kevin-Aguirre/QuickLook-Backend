@@ -1,10 +1,8 @@
 package com.example.QuickLook.phrase;
 
-import com.example.QuickLook.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
 import java.util.List;
 
 @Service

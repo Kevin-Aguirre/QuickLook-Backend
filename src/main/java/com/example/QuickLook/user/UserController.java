@@ -18,12 +18,17 @@ public class UserController {
     }
 
     @GetMapping
-    public List<QuickLookUser> getUsers() {
+    public List<User> getUsers() {
         return userService.getUsers();
     }
 
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable("id") Long id) {
+        return userService.getUserById(id);
+    }
+
     @PostMapping
-    public void registerNewUser(@RequestBody QuickLookUser user) {
+    public void registerNewUser(@RequestBody User user) {
         userService.addNewUser(user);
     }
 

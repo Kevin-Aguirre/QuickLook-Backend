@@ -8,9 +8,9 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository
-        extends JpaRepository<QuickLookUser, Long> {
+        extends JpaRepository<User, Long> {
 
-    @Query("SELECT s FROM QuickLookUser s WHERE s.email= ?1")
-    Optional<QuickLookUser> findUserByEmail(String email);
+    @Query("SELECT s FROM User s WHERE s.email= ?1")
+    Optional<User> findUserByEmail(String email);
 
 }

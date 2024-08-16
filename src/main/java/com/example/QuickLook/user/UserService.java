@@ -21,12 +21,12 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<QuickLookUser> getUsers() {
+    public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    public void addNewUser(QuickLookUser user) {
-        Optional<QuickLookUser> userByEmail = userRepository
+    public void addNewUser(User user) {
+        Optional<User> userByEmail = userRepository
                 .findUserByEmail(user.getEmail());
 
         if (userByEmail.isPresent()) {
@@ -42,5 +42,13 @@ public class UserService {
             throw new IllegalStateException("user not found");
         }
         userRepository.deleteById(id);
+    }
+
+    public User getUserById(Long id) {
+        Optional<User> userById = userRepository.findById(id);
+        if (!userById.isPresent()) {
+            throw new IllegalStateException("user not found");
+        }
+        return userById.get();
     }
 }
