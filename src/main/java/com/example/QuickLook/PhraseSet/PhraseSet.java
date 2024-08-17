@@ -24,15 +24,17 @@ public class PhraseSet {
     private Date dateAdded;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = true)
     @JsonIgnore
     private User user;
+
 
     @OneToMany(mappedBy = "phraseSet", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Phrase> phrases;
 
     public PhraseSet() {}
     public PhraseSet(String phraseSetName, Date dateAdded, User user, List<Phrase> phrases) {
+        System.out.println("using wrong constructor");
         this.phraseSetName = phraseSetName;
         this.dateAdded = dateAdded;
         this.user = user;
