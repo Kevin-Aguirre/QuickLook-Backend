@@ -1,4 +1,4 @@
-package com.example.QuickLook;
+package com.example.QuickLook.DTOs;
 
 public class PhraseSetDTO {
     private String phraseSetName;

@@ -17,6 +17,8 @@ public class Phrase {
     private Long id;
 
     private String phrase;
+
+    @Column(length = 2048)
     private String summary;
 
 
@@ -27,6 +29,8 @@ public class Phrase {
     @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnore // Prevent serialization of the user field to avoid cyclic references
     private User user;
+
+
 
     @ManyToOne
     @JoinColumn(name = "phrase_set_id", nullable = false)
@@ -56,6 +60,14 @@ public class Phrase {
 
     public User getUser() {return user;}
     public void setUser(User user) {this.user = user;}
+
+    public PhraseSet getPhraseSet() {
+        return phraseSet;
+    }
+
+    public void setPhraseSet(PhraseSet phraseSet) {
+        this.phraseSet = phraseSet;
+    }
 
     @Override
     public String toString() {

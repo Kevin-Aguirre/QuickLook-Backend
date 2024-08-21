@@ -1,6 +1,6 @@
 package com.example.QuickLook.PhraseSet;
 
-import com.example.QuickLook.PhraseSetDTO;
+import com.example.QuickLook.DTOs.PhraseSetDTO;
 import com.example.QuickLook.user.User;
 import com.example.QuickLook.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
